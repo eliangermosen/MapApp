@@ -65,21 +65,6 @@ export class ModalFormPage implements OnInit {
       this.presentToast('La Longitud');
     }
     else{
-      // console.error('else');
-      // console.log(this.nombre);
-      // console.log(this.latitud);
-      // console.log(this.longitud);
-      // console.log('paso de valores');
-      // this.marker.position.lat = this.latitud;
-      // this.marker.position.lng = this.longitud;
-      // this.marker.nom = this.nombre;
-      // console.log(this.marker.nom);
-      // console.log(this.marker.position.lat);
-      // console.log(this.marker.position.lng);
-      // console.log(typeof(this.marker.nom));
-      // console.log(typeof(this.marker.position.lat));
-      // console.log(typeof(this.marker.position.lng));
-      // this.router.navigate(['/mapa']);
       if(this.latitud < -90 || this.latitud > 90){
         this.toastOutRange('¡Latitud Debe Ser Entre -90 y 90!');
       }

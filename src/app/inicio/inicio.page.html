@@ -1,8 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <!-- <ion-buttons slot="end">
-      <ion-icon name="location-outline" class="ion-padding"></ion-icon>
-    </ion-buttons> -->
     <ion-title>
       Mapa App
     </ion-title>
@@ -18,7 +15,6 @@
   </ion-header>
 
   <ion-card>
-    <!-- <img src="../../assets/img/imgMap.png"> -->
     <ion-img src="../../assets/img/imgMap.png"></ion-img>
   </ion-card>
 
@@ -27,23 +23,12 @@
       <ion-label>Ubicaciones Para Ti </ion-label>
     </ion-list-header>
 
-    <ion-item *ngFor="let u of ubicaciones" detail>
+    <ion-item *ngFor="let u of ubicaciones" (click)="buscar(u)" detail>
       <ion-text>
         <h4>{{u.nombre}}</h4>
       </ion-text>
     </ion-item>
 
-    <!-- <ion-item detail>
-      <ion-text>
-        <h4>Puntilla 3</h4>
-      </ion-text>
-    </ion-item>
-
-    <ion-item detail>
-      <ion-text>
-        <h4>Puntilla 3</h4>
-      </ion-text>
-    </ion-item> -->
   </ion-list>
 
   <ion-button expand="block" shape="round" (click)="clickBuscar()" color="success" class="btn-inicio">

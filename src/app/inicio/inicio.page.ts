@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ModalFormPage } from '../modal-form/modal-form.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -13,24 +14,22 @@ export class InicioPage implements OnInit {
     {
       nombre: 'La Puntilla',
       latitud: 19.805445180801385,
-      longitud: -70.69598029664434,
-      redirectTo: '/mapa/:nombre/:latitud/:longitud'
+      longitud: -70.69598029664434
     },
     {
       nombre: 'Teleférico de Puerto Plata',
       latitud: 19.78841241246406,
-      longitud: -70.70999398099104,
-      redirectTo: '/mapa/:'
+      longitud: -70.70999398099104
     },
     {
       nombre: 'Playa Alicia, Sosúa',
       latitud: 19.765043705317552,
-      longitud: -70.51886059482611,
-      redirectTo: '/mapa/:'
+      longitud: -70.51886059482611
     },
   ];
 
-  constructor(public modalController: ModalController) { }
+  constructor(private router: Router,
+              public modalController: ModalController) { }
 
   ngOnInit() {
   }
@@ -46,9 +45,8 @@ export class InicioPage implements OnInit {
     return await modal.present();
   }
 
-  buscar(){
-    console.log('aquii');
-    // this.router.navigate(['/mapa',this.ubicaciones.nombre,this.latitud,this.longitud]);
+  buscar(u){
+    this.router.navigate(['/mapa',u.nombre,u.latitud,u.longitud]);
   }
 
 }

@@ -6,22 +6,18 @@
 
     <ion-item>
       <ion-label>Nombre</ion-label>
-      <ion-input placeholder=" Puerto Plata" type="text" [(ngModel)]="nombre"></ion-input>
+      <ion-input placeholder=" Puerto Plata" type="text" [(ngModel)]="nombre" name="nom"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Latitud</ion-label>
-      <ion-input placeholder=" 19.801154158829164" type="number" [(ngModel)]="latitud"></ion-input>
+      <ion-input placeholder=" 19.801154158829164" type="number" [(ngModel)]="latitud" name="lat"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Longitud</ion-label>
-      <ion-input placeholder=" -70.71492215457017" type="number" [(ngModel)]="longitud"></ion-input>
+      <ion-input placeholder=" -70.71492215457017" type="number" [(ngModel)]="longitud" name="lng"></ion-input>
     </ion-item>
-    <!-- <ion-button expand="block" shape="round" (click)="buscar()">
-      <ion-icon name="search" slot="end"></ion-icon>
-      Buscar
-    </ion-button> -->
     <div style="text-align: center !important;" class="m-btn">
       <ion-button shape="round" (click)="buscar()" class="center" color="success">
         Buscar
