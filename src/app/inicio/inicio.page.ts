@@ -9,6 +9,24 @@ import { ModalFormPage } from '../modal-form/modal-form.page';
 })
 export class InicioPage implements OnInit {
 
+  ubicaciones: any[] = [
+    {
+      nombre: 'La Puntilla',
+      latitud: 19.805445180801385,
+      longitud: -70.69598029664434
+    },
+    {
+      nombre: 'Teleférico de Puerto Plata',
+      latitud: 19.78841241246406,
+      longitud: -70.70999398099104
+    },
+    {
+      nombre: 'Playa Alicia, Sosúa',
+      latitud: 19.765043705317552,
+      longitud: -70.51886059482611
+    },
+  ];
+
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
@@ -22,7 +40,12 @@ export class InicioPage implements OnInit {
       initialBreakpoint: 0.4,
       breakpoints: [0, 0.4, 1]
     });
-  return await modal.present();
-}
+    return await modal.present();
+  }
+
+  buscar(){
+    console.log('aquii');
+    // this.router.navigate(['/mapa',this.ubicaciones.nombre,this.latitud,this.longitud]);
+  }
 
 }

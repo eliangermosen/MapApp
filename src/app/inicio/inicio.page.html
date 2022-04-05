@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="end">
+    <!-- <ion-buttons slot="end">
       <ion-icon name="location-outline" class="ion-padding"></ion-icon>
-    </ion-buttons>
+    </ion-buttons> -->
     <ion-title>
       Inicio
     </ion-title>
@@ -10,13 +10,45 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <!-- <ion-header collapse="condense">
+
+  <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Inicio</ion-title>
     </ion-toolbar>
-  </ion-header> -->
-  <ion-button expand="block" shape="round" (click)="clickBuscar()">
+  </ion-header>
+
+  <ion-card>
+    <!-- <img src="../../assets/img/imgMap.png"> -->
+    <ion-img src="../../assets/img/imgMap.png"></ion-img>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header class="list-head">
+      <ion-label>Ubicaciones Para Ti </ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let u of ubicaciones" (click)="buscar()" detail>
+      <ion-text>
+        <h4>{{u.nombre}}</h4>
+      </ion-text>
+    </ion-item>
+
+    <!-- <ion-item detail>
+      <ion-text>
+        <h4>Puntilla 3</h4>
+      </ion-text>
+    </ion-item>
+
+    <ion-item detail>
+      <ion-text>
+        <h4>Puntilla 3</h4>
+      </ion-text>
+    </ion-item> -->
+  </ion-list>
+
+  <ion-button expand="block" shape="round" (click)="clickBuscar()" color="success" class="btn-inicio">
     <ion-icon name="search" slot="end"></ion-icon>
     Buscar en el Mapa
   </ion-button>
+
 </ion-content>
