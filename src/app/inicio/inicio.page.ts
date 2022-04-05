@@ -18,8 +18,6 @@ export class InicioPage implements OnInit {
   }
   async presentModal() {
     const modal = await this.modalController.create({
-      // component: ModalFormComponent,
-      // component: ModalitoPage,
       component: ModalFormPage,
       initialBreakpoint: 0.4,
       breakpoints: [0, 0.4, 1]

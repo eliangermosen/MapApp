@@ -16,7 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    // path: 'mapa',
     path: 'mapa/:nombre/:latitud/:longitud',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
   },

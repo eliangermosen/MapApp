@@ -11,9 +11,7 @@ import { Marker } from '../models/marker';
 })
 export class ModalFormPage implements OnInit {
 
-  // marker: Marker;
   nombre: string = null;
-  // nombre = 'manolo';
   latitud: number = null;
   longitud: number = null;
 
@@ -48,37 +46,29 @@ export class ModalFormPage implements OnInit {
 
   buscar(){
     if(this.nombre === null){
-      // console.log(this.nombre);
       this.presentToast('Un Nombre');
-      // this.router.navigate(['/mapa']);
-      // this.dismiss();
-      // isOpen = false;
     }
     else if(this.latitud === null){
-      // console.error('if');
       this.presentToast('La Latitud');
     }
     else if(this.longitud === null){
-      // console.error('if');
       this.presentToast('La Longitud');
     }
     else{
-      console.error('else');
-      console.log(this.nombre);
-      console.log(this.latitud);
-      console.log(this.longitud);
-      console.log('paso de valores');
-      this.marker.position.lat = this.latitud;
-      this.marker.position.lng = this.longitud;
-      this.marker.nom = this.nombre;
-      console.log(this.marker.nom);
-      console.log(this.marker.position.lat);
-      console.log(this.marker.position.lng);
-      console.log(typeof(this.marker.nom));
-      console.log(typeof(this.marker.position.lat));
-      console.log(typeof(this.marker.position.lng));
-      // this.router.navigate(['/tabla',this.multiplicado]);
-      // this.multiplicado = undefined;
+      // console.error('else');
+      // console.log(this.nombre);
+      // console.log(this.latitud);
+      // console.log(this.longitud);
+      // console.log('paso de valores');
+      // this.marker.position.lat = this.latitud;
+      // this.marker.position.lng = this.longitud;
+      // this.marker.nom = this.nombre;
+      // console.log(this.marker.nom);
+      // console.log(this.marker.position.lat);
+      // console.log(this.marker.position.lng);
+      // console.log(typeof(this.marker.nom));
+      // console.log(typeof(this.marker.position.lat));
+      // console.log(typeof(this.marker.position.lng));
       // this.router.navigate(['/mapa']);
       this.router.navigate(['/mapa',this.nombre,this.latitud,this.longitud]);
       this.dismiss();
