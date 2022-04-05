@@ -4,7 +4,7 @@
       <ion-icon name="location-outline" class="ion-padding"></ion-icon>
     </ion-buttons> -->
     <ion-title>
-      Inicio
+      Mapa App
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +13,7 @@
 
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Inicio</ion-title>
+      <ion-title size="large">Mapa App</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -27,7 +27,7 @@
       <ion-label>Ubicaciones Para Ti </ion-label>
     </ion-list-header>
 
-    <ion-item *ngFor="let u of ubicaciones" (click)="buscar()" detail>
+    <ion-item *ngFor="let u of ubicaciones" detail>
       <ion-text>
         <h4>{{u.nombre}}</h4>
       </ion-text>

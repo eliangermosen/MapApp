@@ -13,17 +13,20 @@ export class InicioPage implements OnInit {
     {
       nombre: 'La Puntilla',
       latitud: 19.805445180801385,
-      longitud: -70.69598029664434
+      longitud: -70.69598029664434,
+      redirectTo: '/mapa/:nombre/:latitud/:longitud'
     },
     {
       nombre: 'Teleférico de Puerto Plata',
       latitud: 19.78841241246406,
-      longitud: -70.70999398099104
+      longitud: -70.70999398099104,
+      redirectTo: '/mapa/:'
     },
     {
       nombre: 'Playa Alicia, Sosúa',
       latitud: 19.765043705317552,
-      longitud: -70.51886059482611
+      longitud: -70.51886059482611,
+      redirectTo: '/mapa/:'
     },
   ];
 

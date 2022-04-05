@@ -32,10 +32,20 @@ export class ModalFormPage implements OnInit {
 
   async presentToast(valor) {
     const toast = await this.toastCtrl.create({
-      message: `Debe Ingresar ${valor}!`,
+      message: `¡Debe Ingresar ${valor}!`,
       duration: 2000,
       color: 'danger',
       icon: 'warning',
+    });
+    toast.present();
+  }
+
+  async toastOutRange(valor) {
+    const toast = await this.toastCtrl.create({
+      message: `${valor}`,
+      duration: 3000,
+      color: 'warning',
+      icon: 'information-circle',
     });
     toast.present();
   }
@@ -70,8 +80,16 @@ export class ModalFormPage implements OnInit {
       // console.log(typeof(this.marker.position.lat));
       // console.log(typeof(this.marker.position.lng));
       // this.router.navigate(['/mapa']);
-      this.router.navigate(['/mapa',this.nombre,this.latitud,this.longitud]);
-      this.dismiss();
+      if(this.latitud < -90 || this.latitud > 90){
+        this.toastOutRange('¡Latitud Debe Ser Entre -90 y 90!');
+      }
+      else if(this.longitud < -180 || this.longitud > 180){
+        this.toastOutRange('¡Longitud Debe Ser Entre -180 y 180!');
+      }
+      else{
+        this.router.navigate(['/mapa',this.nombre,this.latitud,this.longitud]);
+        this.dismiss();
+      }
     }
   }
 
