@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>modalForm</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header>
+      <ion-label> Datos de la Ubicacion </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input placeholder=" Puerto Plata" type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Latitud</ion-label>
+      <ion-input placeholder=" 19.7958" type="number" [(ngModel)]="latitud"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Longitud</ion-label>
+      <ion-input placeholder=" -70.6944" type="number" [(ngModel)]="longitud"></ion-input>
+    </ion-item>
+    <!-- <ion-button expand="block" shape="round" (click)="buscar()">
+      <ion-icon name="search" slot="end"></ion-icon>
+      Buscar
+    </ion-button> -->
+    <ion-button shape="round" (click)="buscar()">
+      Buscar
+      <ion-icon slot="end" name="search"></ion-icon>
+    </ion-button>
+  </ion-list>
+</ion-content>
